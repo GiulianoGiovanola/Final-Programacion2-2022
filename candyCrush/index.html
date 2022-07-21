@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Candy Crush</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="../css/index.css">
+    </head>
+<body onload="javascript: initial();">
+    
+    <div id="botonesT">
+        <div id="botonganador"><a id="mostrarganador"></a></div>
+        <div class="botonessecundarios"><a class="botonesvq" href="../general.html">Volver al Inicio</a></div>
+        <div class="botonessecundarios especial"><a class="botonesvq" href="index.html">Volver a Jugar</a></div>
+    </div>
+
+    <div id="cambioJugador">
+        <div class="content-style"  id="jugadorActual">
+            <p>El juego ha finalizado para el Jugador <div id="jugador"></div></p>
+            <div class="contenBtn">
+                <button id="botonAceptar" >Aceptar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="contenedorGeneral">
+
+        <div id="content-informacion">
+            <div class="content-style" id="nombres">
+                <h2>Jugador</h2>
+                <h3 id="nombreJugador"></h3>
+            </div>
+            
+            <div class="content-style" id="temporizador">
+                <h2>Tiempo</h2>
+                <h3 id="tiempo"></h3>
+            </div>
+
+            <div class="content-style">
+                <h2>Puntos</h2>
+                <h3 id="score"></h3>
+            </div> 
+        </div>
+        
+
+        <div id="ganador">
+            <h1 id="ganadorInput"></h1>
+        </div>
+
+        <div class="contenedor">
+        </div>
+      
+    </div>
+    
+    <script src="../js/jsstorage.js"></script>
+    <script src="../js/function.js"></script>
+    <script src="assets/javascript/candycrush.js"></script>
+    <script type="module" src="./assets/javascript/dndPolyfill.js"></script>
+</body>
+</html>
