@@ -1,0 +1,386 @@
+/* RESET CSS*/
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+	color: #666;
+  
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	font-family: Comfortaa, Poppins, Montserrat, sans-serif;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* FINISH RESET*/
+
+/* Generala */
+
+body{
+	background-color: #c1272d;
+}
+
+main{
+	display: inline-block;
+	height: 45vh;
+}
+
+#contenedorDados div{
+	width: 100px;
+	height: 100px;
+	margin: 0.5em 1em;
+	display: inline-block;
+}
+
+img{
+	border-radius: 1em;
+	width: 100px;
+}
+
+#mostrarganador{
+	display: none;
+}
+
+.seleccionado{
+	/*border: 4px solid white !important;*/
+	opacity: 0.65;
+	
+}
+
+#botonesG{
+	display: none;
+}
+
+a, #mostrarganador{
+	padding: 0.5em;
+	margin: 0.5em;
+	background-color: #f6cc06;
+	border-radius: 1em;
+	font-weight: bold;
+	font-size: 1em;
+	color: white;
+}
+
+#mostrarganador{
+	border: 2px solid #f6cc06 ;
+	background-color: #c1272d;
+	font-size: 1em;
+	text-align: center;
+	color: #f6cc06;
+    text-transform: uppercase;
+}
+
+a{
+	display: inline-block;
+}
+
+#botonganador{
+	position: absolute;	
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.botonessecundarios{
+	grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    width: 90%;
+    text-align: center;
+}
+
+.especial{
+    grid-column: 2 / 3;
+}
+
+.botonesvq{
+	background-color: #f6cc06;
+	color: white;
+    font-size: 1em;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+#aclaracion{
+	margin: 1em;
+}
+
+#estadodeljuego{
+	margin: 0.5em 0.5em 0.5em 0.75em;
+	font-size: 1em;
+	color: white;
+}
+
+#turno, #tiro{
+	color: white;
+	font-size: 1.25em;
+}
+
+aside{
+	height: 25vh;
+  	vertical-align: top;
+	float: right;
+	margin-right: 10em;
+}
+
+table{
+	margin: 2em 0 0 3em; 
+	border: 2px solid white;
+	background-color: #f6cc06;
+}
+
+th, td{
+	border: 2px solid white;
+	color: white;
+	text-transform: uppercase;
+}
+
+th{
+	padding: 0.8em;
+}
+
+td{
+	padding: 0.4em;
+	text-align: center;
+}
+
+#puntajejug1, #puntajejug2{
+	color: #c1272d;
+	font-weight: 900;
+}
+
+#mostrarganador, #reiniciar{
+	display: none;
+}
+
+#cartelganador{
+	margin-left: 10em;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.disabled{
+	cursor: not-allowed;
+}
+
+@media screen and (orientation: portrait){
+	main{
+		display: block;
+	}
+	
+	img{
+		width: 80%;
+    	padding: 0;
+	}
+
+	#estado-tirar{
+		display: grid;
+    	margin: 1em 0;
+    	grid-template-columns: 160px 160px;
+    	justify-content: center;
+    	align-items: center;
+	}
+
+	#botonTirarDados{
+		text-align: center;
+	}
+
+	a{
+		margin: 0.5em 0;
+	}
+
+	#estadodeljuego{
+		text-align: center;
+		margin: 0;
+		text-align: center;
+    	margin: 0;
+    	background-color: #f1f1c2;
+    	border-radius: 1em;
+    	padding: 0.5em;
+    	color: black;
+	}
+
+	#estadodeljuego span{
+		color: black;
+	}
+
+	#contenedorDados{
+		text-align: center;
+		width: 100%;
+		padding: 0;
+		display: flex;
+		margin-top: 1em;
+	}
+
+	#contenedorDados div{
+		width: 20%;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	aside{
+		height: 0;
+		vertical-align: none;
+		float: none;
+		margin: 0 auto;
+	}
+
+	table{
+		margin: 0 auto;
+	}
+
+	#botonganador{
+		padding: 0.25em;
+		font-size: 1.5em;
+	}
+
+	#botonesvq{
+		font-size: 0.5em;
+	}
+
+	.botonessecundarios{
+		text-align: center;
+	}
+
+	#botonesG {
+		grid-template-columns: 200px 200px !important;
+	}
+}
+
+@media screen and (min-aspect-ratio: 13/9){
+	#main-generala{
+		display: grid;
+    	grid-template-columns: 320px 320px;
+    	justify-content: center;
+    	justify-items: center;
+    	align-items: center;
+    	margin-top: 1em;
+	}
+
+	#content-tiros{
+		display: grid;
+		grid-template-columns: 280px;
+		justify-items: center;
+		align-items: center;
+		align-content: center;
+		grid-gap: 36px;
+	}
+
+	#contenedorDados{
+		text-align: center;
+		padding: 0;
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		grid-template-columns: 120px 120px;
+		justify-content: center;
+	}
+
+	#contenedorDados div{
+		width: 70px;
+		height: 70px;
+		margin: 0.5em 1em;
+	}
+
+	#contenedorDados div img{
+		border-radius: 1em;
+    	width: 70px;
+	}
+
+	#estado-tirar{
+		display: flex;
+    	align-items: center;
+	}
+
+	aside{
+		height: auto;
+		margin-right: 0;
+	}
+
+	table{
+		margin: 0;
+		width: 100%;
+	}
+
+	th{
+		font-size: 14px;
+		padding: 0.5em;
+	}
+
+	td{
+		padding: 0.5em;
+		font-size: 12px;
+	}
+
+	#contenedorDados div:nth-child(2n), #contenedorDados div:nth-child(4n){
+		grid-column: 2/3;
+	}
+
+	#contenedorDados div:nth-child(5n){
+		grid-column: 1/3;
+	}
+
+	#estadodeljuego{
+		text-align: center;
+		margin: 0;
+		text-align: center;
+    	margin: 0;
+    	background-color: #f1f1c2;
+    	border-radius: 1em;
+    	padding: 0.5em;
+    	color: black;
+		font-size: 14px;
+	}
+
+	#botonTirarDados{
+		font-size: 14px;
+	}
+
+	#estadodeljuego{
+		color: black;
+	}
+
+	a{
+		padding: 0.6em;
+	}
+}

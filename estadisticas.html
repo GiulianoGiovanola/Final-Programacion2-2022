@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>App</title>
+  </head>
+  <header id="header-titulo">
+    <a id="imagenFlecha" href="index.html">
+      <img src="img/flecha1.png">
+    </a>
+    <h1 id="tituloEstadistica">Resultados</h1>
+  </header>
+  <body onload="javascript: puntajes(), mostrarNombres();" id="body-estadisitica">
+    <aside>
+        <table>
+            <thead>
+                <tr>
+                <th></th>
+                <th id="Jugador1"></th>
+                <th id="Jugador2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ta-Te-Ti</td>
+                    <td id="T1"></td>
+                    <td id="T2"></td>
+                </tr>
+                <tr>
+                    <td>Generala</td>
+                    <td id="G1"></td>
+                    <td id="G2"></td>
+                </tr>
+                <tr>
+                    <td>Candy Crush</td>
+                    <td id="J31"></td>
+                    <td id="J32"></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total1"></td>
+                    <td id="total2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </aside> 
+  </main>
+  <script src="js/cordova.js"></script>
+  <script src="js/function.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/jsstorage.js"></script>
+  <script src="tateti/assets/javascript/functiontateti.js"></script>
+  <script src="generala/assets/javascript/generala.js"></script>
+  </body>
+</html>

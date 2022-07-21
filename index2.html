@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>App</title>
+  </head>
+  <body id="body-editar">
+    <header id="header-titulo">
+      <a id="imagenFlecha" href="index.html">
+        <img src="img/flecha1.png">
+      </a>
+      <h1 id="tituloJugador">Editar Jugador</h1>
+  </header>
+  <main>
+    <input id="inputNombre"  class="inputs" name="ingresatexto" type="text" placeholder="NOMBRE"/>
+    <input id="inputApodo"  class="inputs" name="ingresatexto" type="text" placeholder="APODO"/>
+    <select id="select" onchange="selectedJugador()">
+        <option value="Jugador1">Jugador 1</option>
+        <option value="Jugador2">Jugador 2</option>
+    </select>
+    <div id="content" class="inputs" >
+        <input id="inputColor" type="color" value="#8b002d"/>
+        <button id="botonJugador" class="fotoJugador" onclick="sacarFoto()">
+              <img id="foto" src="img/camarafotografica.png">
+        </button>
+    </div>
+    <div id="divJugador" onclick="javascript:editarPerfiles(); ">
+      <h3><input type="submit" class="botonesPrincipales submit" value="Aceptar"/></h3>
+    </div>
+    <!--
+      <input id="inputNombre2" value="" type="text" placeholder="Nombre"/><br>
+      <input id="inputApodo2" value="" type="text" placeholder="Apodo"/><br>
+      <input id="inputColor2" type="color" value=""/>
+      <br>
+
+      <div class="contenedorBoton">
+          <button id="botonJugador" onclick="sacarFoto()">
+              <img id="foto" src="img/camarafotografica.png">
+          </button>
+      </div>
+
+      
+
+      <div id="divJugador" onclick="javascript:editarPerfiles(); ">
+          <h3><input type="submit" class="botonesPrincipales" value="Aceptar"/></h3>
+      </div>
+    -->
+
+  </main>
+
+  <script src="cordova.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/function.js"></script>
+  <script src="js/jsstorage.js"></script>
+
+  <script>
+    
+    let jugador1 = Storage.get('Jugador1');
+    let jugador2 = Storage.get('Jugador2');
+    const select = document.getElementById('select');
+
+    function selectedJugador(){
+
+      if(select.value == 'Jugador1'){
+        cargar(jugador1)
+      }else{
+        cargar(jugador2)
+      }
+
+    }
+
+    function cargar(jugador){
+
+      document.getElementById("inputNombre2").value = jugador.nombre;
+      document.getElementById("inputApodo2").value = jugador.apodo;
+      document.getElementById("inputColor2").style.color = jugador.color;
+      document.getElementById("foto").src = jugador.foto;
+
+    }
+
+    selectedJugador();
+
+  </script>
+
+  </body>
+
+</html>

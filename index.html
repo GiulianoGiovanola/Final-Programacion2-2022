@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="shortcut icon" href="img/LogoCory.png"/>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <title>CORY</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="tituloJugador">Nuevo Jugador</h1>
+        </header>
+        <main>
+            <input id="inputNombre"  class="inputs" name="ingresatexto" type="text" placeholder="NOMBRE"/>
+            <input id="inputApodo"  class="inputs" name="ingresatexto" type="text" placeholder="APODO"/>
+            <div id="content" class="inputs" >
+                <input id="inputColor" type="color" value="#8b002d"/>
+                <button id="botonJugador" class="fotoJugador" onclick="sacarFoto()">
+                     <img id="foto" src="img/camarafotografica.png">
+                </button>
+            </div>
+            <div id="divJugador" onclick="javascript:store(); ">
+                <input type="submit" class="botonesPrincipales submit" value="ACEPTAR"/>
+            </div>
+        </main>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/function.js"></script>
+        <script src="js/jsstorage.js"></script>
+        <script>
+            window.onload = function(){
+                let Jugador1 = Storage.get("Jugador1");
+                let Jugador2 = Storage.get("Jugador2");
+    
+                if(Jugador1 != null && Jugador2 != null){
+                    window.location.href = "general.html";
+                }
+            }
+        </script>
+    </body>
+</html>

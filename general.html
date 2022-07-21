@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>App</title>
+  </head>
+  <body onload="javascript: mostrarFoto();">
+    <header id="header-general">
+      <img id="imagenPrincipal" src="img/LogoCory.png">
+      <h1 id="tituloGeneral">CORY</h1>
+    </header>
+    <main>
+      <div id="contenedorImagen">
+        <div class="content-datos">
+          <img id="imagenJugador1">
+          <h2 id="j1"></h2>
+        </div>
+        <div class="content-datos">
+          <img id="imagenJugador2">
+          <h2 id="j2"></h2>
+        </div>
+      </div>
+      <div id="content-btn">
+        <div class="divPrincipal">
+          <a class="botonesPrincipales" href="estadisticas.html">Resultados</a>
+        </div>  
+        <div class="divPrincipal">
+          <a class="botonesPrincipales" href="juegos.html">Juegos</a>
+        </div>
+        <div class="divPrincipal">
+          <a href="index2.html" class="botonesPrincipales">Editar Perfiles</a>
+        </div>
+        <div class="content-cerrar-sesion divPrincipal">
+          <a class="botonesPrincipales"><button id="btn-logout">Cerrar sesión</button></a>
+        </div>
+      </div>
+    </main>
+    <script src="cordova.js"></script>
+    <script src="js/function.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jsstorage.js"></script>
+    <script>
+      function logout(){
+
+      localStorage.clear();
+      window.location.href = "index.html";
+      }
+
+      document.getElementById("btn-logout").onclick = function() {logout()};
+    </script>
+  </body>
+</html>

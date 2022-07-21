@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Generala</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body onload="javascript: dadosReset(), nombresColor();">
+  <main id="main-generala">
+    <div id="botonesG">
+      <div id="botonganador"><a id="mostrarganador"></a></div>
+      <div class="botonessecundarios"><a class="botonesvq" href="../general.html">Volver al Inicio</a></div>
+      <div class="botonessecundarios especial"><a class="botonesvq" href="index.html">Volver a Jugar</a></div>
+    </div>   
+    <div id="content-tiros">
+
+      <div id="contenedorDados"></div>
+
+      <div id="estado-tirar">
+        <div id="botonTirarDados">
+          <a href="javascript:tirarDados();">Tirar Dados</a>
+        </div>
+        <div id="estadodeljuego"> Jugador <span id="turno"></span>, tiro <span id="tiro"></span></div>
+      </div>
+
+    </div>
+    
+    <aside>
+      <table id="tabla">
+        <thead>
+          <tr>
+            <th></th>
+            <th id="nombresJugador1"></th>
+            <th id="nombresJugador2"></th>
+          </tr>
+        </thead>
+        <tbody id="puntajes">
+          <tr onclick="anotarPuntos(0)">
+            <td>1</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr onclick="anotarPuntos(1)">
+            <td>2</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr onclick="anotarPuntos(2)">
+            <td>3</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr onclick="anotarPuntos(3)">
+            <td>4</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr onclick="anotarPuntos(4)">
+            <td>5</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr onclick="anotarPuntos(5)">
+            <td>6</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr onclick="anotarPuntos(6)">
+            <td>Escalera</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr onclick="anotarPuntos(7)">
+            <td>Full</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr onclick="anotarPuntos(8)">
+            <td>Poker</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr onclick="anotarPuntos(9)">
+            <td>Generala</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr onclick="anotarPuntos(10)">
+            <td>Doble Generala</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td id="puntajejug1"></td>
+            <td id="puntajejug2"></td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
+  </main>
+  
+  <script src="assets/javascript/generala.js"></script>
+  <script src="../js/jsstorage.js"></script>
+</body>
+
+</html>
